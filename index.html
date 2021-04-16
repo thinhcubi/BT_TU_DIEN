@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Dictionary</h1><br>
+<input type="text" id="inputText">
+<input type="button" onclick="search()" value="Tra cứu">
+<p id="demo"></p>
+
+</body><script>
+    let tiengViet = ["chó", "mèo", "thỏ", "sư tử"]
+let EngRip = ["dog", "cat", "rabbit", "lion"]
+let result;
+
+function search() {
+    let coa = false
+    let text = document.getElementById("inputText").value;
+    console.log(text)
+    for (let i = 0; i < EngRip.length; i++) {
+        if (text === EngRip[i]) {
+            result = tiengViet[i];
+            coa = true
+            break;
+        }
+    }
+        if (coa === true){
+            document.getElementById("demo").innerHTML=result
+        } else {
+            document.getElementById("demo").innerHTML="Ban deo biet gi"
+        }
+
+
+
+}
+</script>
+</html>
